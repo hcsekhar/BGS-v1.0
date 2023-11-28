@@ -1,0 +1,109 @@
+{% extends "index.html" %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 60vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .gallery {
+        padding: 20px;
+    }
+
+    .works .container {
+        align-items: center;
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1rem 0rem;
+        gap: 1rem;
+    }
+    .works{
+        text-align: center;
+        font-size:  35px;
+    }
+
+    .works .heading{
+        background-color: rgb(17, 17, 17);
+        color: #ffffff;
+        text-align: center;
+        font-size:  35px;
+        border-radius: 5px;
+        padding:10px 0 ;
+    }
+
+    .works a {
+       
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        padding: 10px 4px;
+        color: #000000;
+        text-transform: capitalize;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+    }
+
+    .works a:hover {
+        color: #6e6d6d;
+        border-bottom: 1px solid rgb(0, 0, 0)545;
+    }
+    .works img{
+        margin: 20px;-webkit-transform: scale(1); transform: scale(1);-webkit-transition: .3s ease-in-out;transition: .3s ease-in-out;
+    }
+    .works img:hover {
+
+	transform: scale(1.1);
+    }
+</style>
+
+
+<div class="bgimage">
+    <div class="overlay">
+        <h1>Gallery</h1>
+        <p>Life is an event, Make it memorable</p>
+    </div>
+</div>
+<section class="gallery">
+    <section class="works" id="works">
+        <div class="heading">
+            <h1>Our Event Gallery</h1>
+        </div>
+
+        <div class="container">
+            <a href="{% url 'gallery' 0 %}"> All</a>
+            {% for i in allcategory %}
+            <a href="{% url 'gallery' i.id %}">{{i.name}}</a>
+            {% endfor %}
+        </div>
+       
+        {% for j in gallery %}
+        <img src="{{j.image.url}}" alt="" height="300px" width="300px" >
+        {% empty %}
+        {% endfor %}
+    </section>
+</section>
+
+{% endblock body %}

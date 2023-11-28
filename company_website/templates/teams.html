@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+.bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .overlay p {
+        font-size: 16px;
+        
+    }
+    .teams {
+        margin-bottom: 20px;
+        margin-left: 10%;
+        display: flex; 
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .teams img{
+        margin: 20px;
+        -webkit-transform: scale(1); 
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    .teams img:hover {
+
+	transform: scale(1.1);
+    }
+    .detail h1,p{
+        padding-left: 3px;
+border-left:3px solid #000;
+    }
+
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>OUR CORE TEAM</h1>
+        <p>Dreams and teams work together</p>
+    </div>
+</div>
+<div class="heading" style="text-align: center; font-size:25px; color: #fff; background-color: black;">
+    <h1>Team Softech</h1>
+</div>
+<section class="teams">
+    
+    {% for i in team %}
+    <div class="detail">
+        <img src="{{i.image.url}}" alt="" height="300px" width="300px";>
+    <h1>{{i.name}}</h1>
+    <p>{{i.designation}}</p>
+    </div>
+    {% endfor %}
+</section>
+{% endblock body %}px

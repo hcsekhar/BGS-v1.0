@@ -1,0 +1,315 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .overlay p {
+        font-size: 16px;
+    }
+    article {
+        --img-scale: 1.001;
+        --title-color: black;
+        --link-icon-translate: -20px;
+        --link-icon-opacity: 0;
+        position: relative;
+        box-shadow: none;
+        background: rgba(88, 121, 218, 0.679);
+        transform-origin: center;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+        margin: 20px;
+      }
+      
+      article a::after {
+        position: absolute;
+        inset-block: 0;
+        inset-inline: 0;
+        cursor: pointer;
+        content: "";
+      }
+      
+      /* basic article elements styling */
+      article h2 {
+        margin: 0 0 18px 0;
+        font-family: "Bebas Neue", cursive;
+        font-size: 1.9rem;
+        letter-spacing: 0.06em;
+        color: var(--title-color);
+        transition: color 0.3s ease-out;
+      }
+      
+      figure {
+        margin: 0;
+        padding: 0;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+      }
+      
+      article img {
+          width: fit-content;
+        max-width: 100%;
+        transform-origin: center;
+        transform: scale(var(--img-scale));
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .article-body {
+        padding: 24px;
+      }
+      
+      article a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #17191a;
+      }
+      
+      article a:focus {
+        outline: 1px dotted #dde2e2;
+      }
+      
+      article a .icon {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        transform: translateX(var(--link-icon-translate));
+        opacity: var(--link-icon-opacity);
+        transition: all 0.3s;
+      }
+      
+      /* using the has() relational pseudo selector to update our custom properties */
+      article:has(:hover, :focus) {
+        --img-scale: 1.1;
+        --title-color: #ebf3f4;
+        --link-icon-translate: 0;
+        --link-icon-opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+      
+      
+      /************************ 
+      Generic layout (demo looks)
+      **************************/
+      
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      
+      
+      .articles {
+        display: grid;
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: 24px;
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        gap: 24px;
+      }
+      
+      @media screen and (max-width: 960px) {
+        article {
+          container: card/inline-size;
+        }
+      
+        .article-body p {
+          display: none;
+        }
+      }
+      
+      @container card (min-width: 380px) {
+        .article-wrapper {
+          display: grid;
+          grid-template-columns: 100px 1fr;
+          gap: 16px;
+        }
+      
+        .article-body {
+          padding-left: 0;
+        }
+      
+        figure {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+      
+        figure img {
+          height: 100%;
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+      }
+      
+      .sr-only:not(:focus):not(:active) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+      .blog .container .box{
+        display: grid;
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: 24px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+      }
+       
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>BLOG POSTS</h1>
+        <p>A symbol of freedom</p>
+    </div>
+</div><br>
+<section class="articles">
+    <article>
+  
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://i0.wp.com/keyreply.com/wp-content/uploads/2022/03/banner-Image-healthcare-maketing.png?resize=2048%2C912&ssl=1" alt="" height="400px"/>
+          </figure>
+          <div class="article-body">
+            <h2>Healthcare Marketing Trends</h2>
+            <p>
+              In the ever-evolving landscape of healthcare, marketing strategies play a pivotal role in connecting with audiences, building trust, and staying ahead of the curve. The healthcare industry is undergoing a period of rapid transformation driven by technological advancements, changing patient expectations, and evolving regulatory landscapes. In this comprehensive blog, we'll delve into the top 8 healthcare marketing.
+            </p>
+            <a href="https://www.marolix.com/healthcare-marketing-trends" class="read-more" style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+  
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://selzy.com/en/blog/wp-content/uploads/2022/07/email-marketing-resources_1200x630.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>B2B Email Marketing 2024</h2>
+            <p>
+              In the fast-paced world of online marketing, email remains a powerful and effective tool for B2B (business-to-business) communication. B2B email marketing is set to evolve in 2024 with a range of exciting email marketing trends. It is a direct and personal way to communicate with potential and existing customers, and it can be used to grow sales, nurture leads, & build relationships.
+            </p>
+            <a href="https://www.marolix.com/b2b-email-marketing" class="read-more"  style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    
+    <article>
+  
+      <div class="article-wrapper">
+        <figure>
+          <img src="https://www.anodius.com/wp-content/uploads/2022/05/what-is-crm-system-anodius.jpg" alt="" />
+        </figure>
+        <div class="article-body">
+          <h2>CRM for small businesses</h2>
+          <p>
+            Customer Relationship Management refers to a set of customer retention strategies and technologies used to manage & analyze customer interactions and data throughout the customer lifecycle. CRM systems enable businesses to streamline their sales, marketing, and customer support efforts. By centralizing customer data and communication, small businesses can improve their relationship with clients.
+          </p>
+          <a href="https://www.marolix.com/crm-for-small-businesses" class="read-more" style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+            Read more <span class="sr-only">about this is some title</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <article>
+  
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://i0.wp.com/www.axestrack.com/wp-content/uploads/2021/07/enterprise-resource-management-erp-software-system-business-resources-plan-scaled.jpg?fit=2560%2C1461&ssl=1" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Companies Need An Erp System</h2>
+            <p>
+              In the fast-paced and ever-evolving world of business, staying ahead of your competition requires not only hard work but also smart work. To achieve this, companies need the right tools and strategies to streamline their operations, boost efficiency, and optimize decision-making processes. Amongst the ERP system is one of the tools that has gained immense popularity in recent years
+            </p>
+            <a href="https://www.marolix.com/why-companies-need-an-erp-system" class="read-more"  style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+              Read more  <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+  
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://www.smamarketing.net/wp-content/uploads/2023/07/Smart-Ways-to-Partner-with-a-Digital-Marketing-Agency-1.png" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>Right Digital Marketing Partner</h2>
+            <p>
+              Your business's success depends on your online presence in today's fast-paced digital world. Digital marketing is essential for any business looking to thrive in the digital world. But with so many different digital marketing agencies and consultants out there, it can be not easy to know which one to choose.Digital marketing has emerged as a powerful tool to reach a global audience, increase brand visibility, and drive sales.
+            </p>
+            <a href="https://www.marolix.com/choose-the-right-digital-marketing-partner" class="read-more" style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+  
+        <div class="article-wrapper">
+          <figure>
+            <img src="https://www.npws.net/hs-fs/hubfs/How%20to%20Use%20AI%20to%20Boost%20Your%20B2B%20Content%20Marketing_%204%20Key%20Steps.jpg?width=800&height=450&name=How%20to%20Use%20AI%20to%20Boost%20Your%20B2B%20Content%20Marketing_%204%20Key%20Steps.jpg" alt="" />
+          </figure>
+          <div class="article-body">
+            <h2>AI in B2B Marketing</h2>
+            <p>
+              Welcome to the future of B2B marketing, where artificial intelligence (AI) is poised to revolutionize how businesses connect, engage, and succeed. With the rapid evolution of technology, artificial intelligence (AI) has emerged as a game-changer in the B2B marketing landscape. As we approach 2024, it's clear that AI will play a pivotal role in shaping the future of B2B marketing.
+            </p>
+            <a href="https://www.marolix.com/AI-in-B2B-Marketing" class="read-more" style="color: white;background-color: #040404; padding: 5px; border-radius: 10px; margin-top: 5px;">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <article>
+
+  </section>
+{% endblock body %}

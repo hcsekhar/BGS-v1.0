@@ -1,0 +1,190 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .overlay p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 55px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 500;
+    }
+    
+    h4 {
+        line-height: 35px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    p {
+        line-height: 28px;
+        font-size: 18 px;
+    }
+    .serv-list {
+        padding-left:5% ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        gap: 1.9rem;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .serv-list .list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .serv-list .list ul li {
+        
+        padding: 8px;
+        display: flex;
+        gap: 0.5rem;
+        background-color: rgb(196, 199, 203);
+        border-radius: 2px;
+    }
+    
+    .serv-list .list ul li a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #17191a;
+    }
+    .dots{
+        margin-top: 20px;
+        margin-left: 5% ;
+        border-left:3px solid #000 ;
+        width: 910px;
+        background-color: rgb(196, 199, 203);
+    }
+    .dots p{
+        padding: 20px;
+    }
+    .desc{
+        margin-top: 20px;
+        margin-left: 5% ;
+        width: 910px;
+        text-align: justify;
+    }
+    .desc ul li h4{
+        color: black;
+    }
+    .desc ul li p{
+        color: #7e7e7e;
+    }
+    .desc ul li{
+        margin-left:5% ;
+        gap: 1rem;
+        color: #7e7e7e;
+    } 
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>MOBILE APP DESIGN & DEVELOPMENT</h1>
+        <p>Creating user-friendly and visually appealing mobile apps for seamless experiences</p>
+    </div>
+</div><br>
+<div class="serv-list">
+    <div class="serv-img">
+      <img src="https://images.pexels.com/photos/38544/imac-apple-mockup-app-38544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" height="400px"
+        width="1000px">
+    </div>
+    <div class="list" style="margin-top:60px;">
+      <h4>All Services</h4>
+      <ul>
+        <li><a href="{% url "product" %}">Product Design & Development</a></li>
+        <li> <a href="{% url "web" %}">Web Design & Development</a></li>
+        <li><a href="{% url "digital" %}">Digital Marketing</a></li>
+        <li><a href="{% url "mobile" %}">Mobile Design & Development</a></li>
+        <li><a href="{% url "staff" %}">IT Staffing & Deployment</a></li>
+    </ul>
+    </div>
+  </div><br>
+  <div class="quote" width="800px">
+    <h2><a href="#" style="color: black; width:800px; padding-left: 5% ;">"Reach your customers on their preferred device with Marolix's user-centric mobile application services."</a></h2>
+  </div>
+  <div class="dots">
+    <p>
+        Marolix offers top-notch Mobile App Development Trends services, from ideation to launch and beyond, with a user-centric approach and expertise in creating customised, robust, and scalable mobile apps for iOS and Android platforms. Whether you need a simple or complex enterprise-level application, we have the expertise to deliver quality solutions tailored to your unique requirements.</p>
+  </div>
+  <div class="desc">
+    <p>
+      <p> At Marolix, we understand that mobile app development is an ongoing process. We offer post-launch services, including app maintenance and upgrades, to ensure your app stays relevant and up-to-date</p><br>
+      
+    </p>
+    <h4>Diverse Mobile Application Design and Development</h4><br>
+    <ul>
+      <li><h4>Native Mobile App Development:</h4>
+        <p>Our team is highly skilled in creating native mobile applications for iOS and Android platforms using cutting-edge tools and technologies. We collaborate closely with our clients to comprehend their unique needs and create customised apps that align with their business objectives.</p>
+      </li>
+      <li><h4>Hybrid Mobile App Development:</h4>
+        <p>We specialise in building hybrid mobile apps using popular frameworks such as React Native, Xamarin, or Ionic. Hybrid apps offer the advantage of running on multiple platforms while maintaining a native look and feel.</p>
+      </li>
+      <li><h4>Cross-Platforms Mobile App Development:</h4>
+        <p>We use modern tools and technologies like Flutter or PhoneGap to build cross-platform mobile apps that can run on multiple platforms, including iOS, Android, and the web. Our professional developers have the expertise to build high-performance apps that are optimised for a range of devices.</p>
+      </li>
+      <li><h4>Wearables and Embedded Software:</h4>
+        <p>Our team has experience building mobile apps with wearable devices such as smartwatches, fitness trackers, or embedded systems like home automation. We use the latest technologies to develop apps optimised for small screens that have a seamless user experience.</p>
+      </li>
+    </ul><br>
+    <div class="design">
+      <h2>The Technologies We  Excel:</h2><br>
+      <ul>
+        <li>Python</li>
+        <li>java</li>
+        <li> Flutter </li>
+        <li>React Native</li>
+        <li>Swift</li>
+        <li>Kotlin</li>
+        <li>R Programming</li>
+        <li>C++</li>
+      </ul>
+    </div>
+    <div class="indi">
+      <h2>The Industries We Cater :</h2><br>
+      <ul>
+      <li>Manufacturing Industry </li>
+      <li>Retail and E-Commerce</li>
+      <li> Finance</li>
+      <li>Healthcare</li>
+      <li>Education</li>
+      <li>Information Technology</li>
+      <li>Pharmaceuticals</li>
+      <li>Real Estate</li>
+    </ul><br>
+    <p>Transform your ideas into successful mobile apps with our premium app development services. Contact us now!</p>
+  </div><br>    
+  </div>{% endblock body %}

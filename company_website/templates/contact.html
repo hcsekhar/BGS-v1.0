@@ -1,0 +1,149 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .contact{
+    min-height: 100vh;
+    background-color: #e0e0e0;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.contact-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20%;
+}
+.contact-form{
+    text-align: left;
+}
+.contact-form h3{
+    font-size: 27px;
+    margin-bottom: 30px;
+    color: #333;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+input,textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    color: #333;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+    box-shadow: 0 0 8px #bbb;
+}
+form button{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #001e32;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color: rgb(0, 6, 16);
+}
+.contact-info{
+    text-align: left;
+}
+.contact-info h3{
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.contact-info h4{
+    font-size: 17px;
+}
+.contact-info p{
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 20px;
+}
+.contact-info i{
+    color: #080808;
+    margin-right: 10px;
+}
+@media screen and (max-width:768px){
+    .container{
+        padding: 20px;
+    }
+    .contact-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>CONTACT US</h1>
+        <p>Find us here</p>
+    </div>
+</div>
+<section class="contact">
+    <div class="container">
+        <h2>CONTACT US</h2>
+       <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <h4><i class="fa-solid fa-map-location-dot"></i>ADDRESS :</h4><br>
+            <p> Unit-603/D,5th Floor,vasavi MPM Grand,Beside Ameerpet Metro Station,Hyderabad-500073</p><br>
+            <h4><i class="fa-regular fa-envelope"></i></i>EMAIL :</h4><br>
+            <p>&nbsp; md@luritsolution.com</p><br>
+            <h4><i class="fa fa-phone"></i>PHONE :</h4><br>
+            <p> &nbsp;+91 8106216882</p>
+          </div>
+          <div class="contact-form" >
+            <h3>Send Us a Message</h3>
+            <form action="/contact_us" method="POST">
+                {% csrf_token %}
+             <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+             </div>
+             <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+               </div>
+               <div class="form-group">
+                <textarea type="text" id="message" name="message" placeholder="Your Message" required></textarea>
+               <button type="submit" >Send Message</button>
+            </form>
+         </div>
+      </div>
+  </div>
+
+</section>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15226.281699782397!2d78.4428661!3d17.4323913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90ce69555555%3A0xe878f5d4343c5822!2sLUR%20IT%20BUSINESS%20SOLUTIONS%20(OPC)%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1700827496790!5m2!1sen!2sin" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+{% endblock body %}

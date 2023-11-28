@@ -1,0 +1,185 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .overlay p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 55px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 500;
+    }
+    
+    h4 {
+        line-height: 35px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    p {
+        line-height: 28px;
+        font-size: 18 px;
+    }
+    .serv-list {
+        padding-left:5% ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        gap: 1.9rem;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .serv-list .list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .serv-list .list ul li {
+        
+        padding: 8px;
+        display: flex;
+        gap: 0.5rem;
+        background-color: rgb(196, 199, 203);
+        border-radius: 2px;
+    }
+    
+    .serv-list .list ul li a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #17191a;
+    }
+    .dots{
+        margin-top: 20px;
+        margin-left: 5% ;
+        border-left:3px solid #000 ;
+        width: 910px;
+        background-color: rgb(196, 199, 203);
+    }
+    .dots p{
+        padding: 20px;
+    }
+    .desc{
+        margin-top: 20px;
+        margin-left: 5% ;
+        width: 910px;
+        text-align: justify;
+    }
+    .desc ul li h4{
+        color: black;
+    }
+    .desc ul li p{
+        color: #7e7e7e;
+    }
+    .desc ul li{
+        margin-left:5% ;
+        gap: 1rem;
+        color: #7e7e7e;
+    } 
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>DIGITAL MARKETING SERVICES</h1>
+        <p>Revolutionise your online growth with our data-driven approach</p>
+    </div>
+</div><br>
+<div class="serv-list">
+    <div class="serv-img">
+      <img src="https://images.pexels.com/photos/1015568/pexels-photo-1015568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" height="400px"
+        width="1000px">
+    </div>
+    <div class="list">
+      <h4>All Services</h4>
+      <ul>
+        <li><a href="{% url "product" %}">Product Design & Development</a></li>
+        <li> <a href="{% url "web" %}">Web Design & Development</a></li>
+        <li><a href="{% url "digital" %}">Digital Marketing</a></li>
+        <li><a href="{% url "mobile" %}">Mobile Design & Development</a></li>
+        <li><a href="{% url "staff" %}">IT Staffing & Deployment</a></li>
+    </ul>
+    </div>
+  </div><br>
+  <div class="quote" width="800px">
+    <h2><a href="#" style="color: black; width:800px; padding-left: 5% ;">“Drive traffic, reach potential customers, and boost your sales with Marolix's cutting-edge digital marketing strategies.”</a></h2>
+  </div>
+  <div class="dots">
+    <p>In today's fast-paced digital world, digital marketing has become a basic need for every business. At Marolix, we specialise in helping businesses like yours establish a strong online presence and drive traffic to your website. Our team of experts is passionate about providing customised digital marketing solutions that cater to your unique business needs.</p>
+  </div>
+  <div class="desc">
+    <p>
+      <p>From search engine optimization (SEO) and social media marketing to email marketing and pay-per-click (PPC) advertising, we have the tools and expertise to help you succeed in the digital world.</p><br>
+      <ul>
+        <li>Search Engine Optimization</li>
+        <li>Social Media Marketing</li>
+        <li> Content Marketing</li>
+        <li>Pay Per Click</li>
+        <li>Search Engine Marketing</li>
+        <li>Email Marketing</li>
+        <li>Branding</li>
+        <li>Mobile Application Marketing</li>
+        <li>Affiliate Marketing</li>
+      </ul>
+    </p>
+    
+    <div class="design">
+      <h2>The technologies in which we wxcel</h2><br>
+      <ul>
+        <li>Customer Relationship Management Tools</li>
+        <li>Creating SEO-optimised website content</li>
+        <li> Migrating Platforms</li>
+        <li>Incorporating additional features & functionality</li>
+        <li>Conducting security checks</li>
+        <li>Optimising speed</li>
+        <li>Integrated UI/UX interface</li>
+      </ul>
+    </div>
+    <div class="indi">
+      <h2>The Industries We Cater :</h2><br>
+      <ul>
+      <li>Manufacturing Industry </li>
+      <li>Retail and E-Commerce</li>
+      <li> Finance</li>
+      <li>Healthcare</li>
+      <li>Education</li>
+      <li>Information Technology</li>
+      <li>Pharmaceuticals</li>
+      <li>Real Estate</li>
+    </ul><br>
+    <p>“Unleash the full potential of your online presence with our expert website design and development services. Let's create a digital masterpiece together!"</p>
+  </div>
+  </div><br>
+{% endblock body %}

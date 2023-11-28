@@ -1,0 +1,220 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<style>
+    .bgimage {
+        height: 80vh;
+        width: 100%;
+        position: relative;
+        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .overlay p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 55px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 500;
+    }
+    
+    h4 {
+        line-height: 35px;
+        font-size: 25px;
+        font-weight: 400;
+    }
+    
+    p {
+        line-height: 28px;
+        font-size: 18 px;
+    }
+    .serv-list {
+        padding-left:5% ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        gap: 1.9rem;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .serv-list .list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .serv-list .list ul li {
+        
+        padding: 8px;
+        display: flex;
+        gap: 0.5rem;
+        background-color: rgb(196, 199, 203);
+        border-radius: 2px;
+    }
+    
+    .serv-list .list ul li a {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #17191a;
+    }
+    .dots{
+        margin-top: 20px;
+        margin-left: 5% ;
+        border-left:3px solid #000 ;
+        width: 910px;
+        background-color: rgb(196, 199, 203);
+    }
+    .dots p{
+        padding: 20px;
+    }
+    .desc{
+        margin-top: 20px;
+        margin-left: 5% ;
+        width: 910px;
+        text-align: justify;
+    }
+    .desc ul li h4{
+        color: black;
+    }
+    .desc ul li p{
+        color: #7e7e7e;
+    }
+    .desc ul li{
+        margin-left:5% ;
+        gap: 1rem;
+        color: #7e7e7e;
+    } 
+</style>
+<div class="bgimage">
+    <div class="overlay">
+        <h1>WEBSITE DESIGN & DEVELOPMENT</h1>
+        <p>Turning your vision into reality</p>
+    </div>
+</div>
+<div class="serv-list" style="margin-top:20px;">
+    <div class="serv-img">
+        <img src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""
+            height="500px" width="1000px">
+    </div><br>
+    <div class="list" style="padding-top:100px">
+        <h4>All Services</h4>
+        <ul>
+            <li><a href="{% url "product" %}">Product Design & Development</a></li>
+            <li> <a href="{% url "web" %}">Web Design & Development</a></li>
+            <li><a href="{% url "digital" %}">Digital Marketing</a></li>
+            <li><a href="{% url "mobile" %}">Mobile Design & Development</a></li>
+            <li><a href="{% url "staff" %}">IT Staffing & Deployment</a></li>
+        </ul>
+    </div>
+</div><br>
+<div class="quote" width="800px" >
+    <h2><a href="#" style="color: black; width:800px; padding-left: 5% ;">"Your website is your online storefront; make
+            it count with expert design and development by Marolix."</a></h2>
+</div>
+<div class="dots">
+    <p>
+        Let's build a unique website for higher conversions.
+
+        In today's digital age, a website is more than just an online presence - it's an essential component of any
+        business. At Marolix, every website we design is custom-built to meet the specific needs of our clients. Our
+        goal is to create a website that reflects your brand's personality and delivers an exceptional user experience
+        to your customers.</p>
+</div>
+<div class="desc">
+    <p>
+    <p>Remember that your business website is a vital component of your overall brand. It should embody the essence of
+        your brand's visual style and messaging while also inspiring your intended audience to trust and depend on your
+        business. Our website design and development services are not limited to creating a website. We take a holistic
+        approach to digital marketing, and our services are designed to help you grow your online presence and reach
+        your business goals.</p><br>
+    <ul>
+        <li>SEO Friendly</li>
+        <li>Excellent UI/UX designs</li>
+        <li> Well-designed and completely functiona</li>
+        <li>Customized</li>
+    </ul>
+    </p>
+    <h4>Diverse Website Development Services</h4><br>
+    <ul>
+        <li>
+            <h4>Corporate Website Design and Development:</h4>
+            <p>This service is designed to meet the website development needs of large corporate businesses. We ensure
+                delivering an innovative, competitive, engaging, fully functional, and end-to-end encrypted website for
+                large-scale organisations to help their businesses stand out in the market.</p>
+        </li>
+        <li>
+            <h4>SME's Website Design and Development:</h4>
+            <p>SMEs often have different website development needs than larger corporations. Marolix specialises in
+                providing SMEs with personalised website design and development services tailored to their needs. By
+                collaborating closely with clients, Marolix creates visually appealing, user-friendly, and SEO-optimised
+                websites.</p>
+        </li>
+        <li>
+            <h4>E-commerce Website Design and Development:</h4>
+            <p>E-commerce websites require specialised development services to ensure that they are optimised for sales
+                and provide an exceptional user experience to customers. Marolix provides end-to-end e-commerce website
+                design and development services, including everything from website design and development to payment
+                gateway integration and order fulfilment.</p>
+        </li>
+        <li>
+            <h4>Website Revamping:</h4>
+            <p>Websites that are outdated or not optimised for search engines can hurt a business's online presence.
+                Marolix offers website revamping services to update and improve existing websites to meet the latest
+                design and functionality standards.</p>
+        </li>
+    </ul><br>
+    <div class="design">
+        <h2>A Sneak-Peak at What We Offer:</h2><br>
+        <ul>
+            <li>Updating Plugins</li>
+            <li>Creating SEO-optimised website content</li>
+            <li> Migrating Platforms</li>
+            <li>Incorporating additional features & functionality</li>
+            <li>Conducting security checks</li>
+            <li>Optimising speed</li>
+            <li>Integrated UI/UX interface</li>
+        </ul>
+    </div>
+    <div class="indi">
+        <h2>The Industries We Cater :</h2><br>
+        <ul>
+            <li>Manufacturing Industry </li>
+            <li>Retail and E-Commerce</li>
+            <li> Finance</li>
+            <li>Healthcare</li>
+            <li>Education</li>
+            <li>Information Technology</li>
+            <li>Pharmaceuticals</li>
+            <li>Real Estate</li>
+        </ul><br>
+        <p>“Unleash the full potential of your online presence with our expert website design and development services.
+            Let's create a digital masterpiece together!"</p>
+    </div>
+</div><br>
+{% endblock body %}
