@@ -12,6 +12,7 @@ body {
 }
 
 .navbar {
+  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -21,12 +22,13 @@ body {
 }
 
 .navbar .container {
+ height: 100px;
   padding: 1rem 6%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-color: black;
+ 
 }
 
 .logo {
@@ -37,7 +39,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
+  color: #A0248C;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -46,7 +48,7 @@ body {
   font-family: 'Jost', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: #fff;
+  color: #A0248C;
   text-transform: uppercase;
   letter-spacing: 0.7px;
 
@@ -60,22 +62,23 @@ body {
 .navbar ul a {
   font-size: 16px;
   font-weight: 400;
-  color: #ccc;
+  color: #A0248C;
   text-transform: capitalize;
 }
 
-.navbar ul a:hover {
-  color: #fff;
-}
+ .navbar ul a:hover {
+  color: #a94b4b;
+} 
 
 .navbar ul li {
   list-style: none;
 
+
 }
 
 .dropbtn {
-  background-color: #101010;
-  color: #ccc;
+  color: #ab3d3d;
+  background-color: transparent;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -92,7 +95,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 260px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(144, 30, 96, 0.2);
   z-index: 1;
 }
 
@@ -178,9 +181,7 @@ img {
   transition: background-color 0.9s ease;
 }
 
-.active {
-  background-color: #000000;
-}
+
 
 
 .fade {
@@ -240,7 +241,11 @@ img {
   line-height: 42px;
   letter-spacing: -1px;
   margin-top: 30px;
+  color: #800080;
 }
+.content h3{
+  color: #800080;
+} 
 
 .content p {
   padding: 20px;
@@ -252,7 +257,7 @@ img {
 {
   margin-left: 150px;
     margin-top: 30px;
-    background-color: rgb(10, 90, 182);
+    background-color: rgb(153, 48, 116);
     text-transform: uppercase;
     text-decoration: none;
     color: rgb(245, 240, 240);
@@ -300,6 +305,7 @@ img {
 /* blog */
 .blog h2{
   text-align: center;
+  color:rgb(118, 24, 101);
 }
 
 .blog .container {
@@ -461,10 +467,10 @@ img {
 
 .default-btn {
   margin-left: 150px;
-  background-color: rgb(109, 152, 202);
+  background-color: rgb(128, 51, 124);
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: rgb(248, 245, 245);
   font-size: 12px;
   border-radius: 2px;
   line-height: 50px;
@@ -473,8 +479,10 @@ img {
   padding: 0 30px;
   box-shadow: 0 3px 10px rgba(71, 44, 173, .2);
   font-weight: 600;
+ color: #861c56;
 }
 article {
+  
   --img-scale: 1.001;
   --title-color: black;
   --link-icon-translate: -20px;
@@ -524,6 +532,9 @@ article img {
 .article-body {
   padding: 24px;
 }
+.article-body p{
+  text-align: justify;
+}
 
 article a {
   display: inline-flex;
@@ -570,10 +581,10 @@ Generic layout (demo looks)
 
 .articles {
   display: grid;
-  max-width: 1200px;
+  
   margin-inline: auto;
   padding-inline: 24px;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
   gap: 24px;
 }
 
@@ -631,7 +642,7 @@ Generic layout (demo looks)
 
 /*footer*/
 footer {
-  background-image: url(https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-color: #000;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

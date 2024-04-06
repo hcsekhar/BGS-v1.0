@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
-    <title>softech</title>
+    <title>Being Grabbed</title>
 </head>
 
 <body>
     <div class="navbar">
         <div class="container">
             <div class="logo">
-                <a href=""><strong>SF</strong>SofTech</a>
+                <img src="{% static 'image/BSG_logo.jpg' %}" style="height: 56px; width: 250px; padding-right: px;">
+                {% comment %} <a href=""><strong>BGS </strong>Being Grabbed Solution</a> {% endcomment %}
             </div>
             <ul>
                 <li><a href="{% url "home" %}" class="active">Home</a></li>
                 <li><a href="{% url "about" %}">About</a></li>
-                <li>
-                    <div class="dropdown">
+                
+                    {% comment %} <div class="dropdown">
                         <button class="dropbtn">Services</button>
                         <div class="dropdown-content">
                             <a href="{% url "product" %}">Product Design & Development</a>
@@ -30,10 +31,12 @@
                             <a href="{% url "mobile" %}">Mobile Design & Development</a>
                             <a href="{% url "staff" %}">IT Staffing & Deployment</a>
                         </div>
-                    </div>
-                </li>
-                <li><a href="{% url "port" %}">Portfolio</a></li>
-                <li><a href="{% url "team" %}">Team</a></li>
+                    </div> {% endcomment %}
+                
+                <li><a href="{% url "products" %}">Product</a></li>
+                {% comment %} <li><a href="{% url "port" %}">Portfolio</a></li> {% endcomment %}
+                <li><a href="">Pricing</a></li>
+                {% comment %} <li><a href="{% url "team" %}">Team</a></li> {% endcomment %}
                 <li><a href="/gallery/0">Gallery</a></li>
                 <li><a href="{% url "blog" %}">Blog</a></li>
                 <li> <a href="{% url "contact" %}">Contact Us</a></li>
@@ -43,6 +46,7 @@
         {% block body %}
         {% endblock body %}
 
+</br>
 
         <footer>
             
@@ -51,8 +55,8 @@
                     <div class="box">
                         <div class="logo">
                             <a href="#">
-                                <strong>SF</strong>
-                                SofTech
+                                <strong>BGS</strong>
+                                Being Grabbed Solution
                             </a>
                         </div>
                         <div class="text1">
@@ -65,18 +69,20 @@
                     <div class="box">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="{% url "product" %}">Product Design & Development</a></li>
-                            <li> <a href="{% url "web" %}">Web Design & Development</a></li>
-                            <li><a href="{% url "digital" %}">Digital Marketing</a></li>
-                            <li><a href="{% url "mobile" %}">Mobile Design & Development</a></li>
-                            <li><a href="{% url "staff" %}">IT Staffing & Deployment</a></li>
+                            <li><a href="{% url "home" %}">Home</a></li>
+                            <li><a href="{% url "about" %}">About</a></li>
+                            <li><a href="{% url "product" %}">Product</a></li>
+                            <li><a href="{% url "pricing" %}">Pricing</a></li>
+                            <li><a href="{% url "team" %}">Team</a></li>
+                            <li><a href="{% url "blog" %}">Blog</a></li>
+                            <li><a href="{% url "contact" %}">Contact</a></li>
                         </ul>
                     </div>
                     <div class="box">
                         <h3>Contact</h3>
                         <ul>
                             <li><i class="fa fa-phone"></i> +91 987654321</li>
-                            <li><i class="fa fa-at"></i> info@softech.com</li>
+                            <li><i class="fa fa-at"></i> info@beinggrabbed.com</li>
                             <li><i class="fa fa-location-dot"></i> 1-234/A, Ameerpet,Hyderabad,Telangana-500016</li>
                         </ul>
                     </div>
@@ -86,7 +92,7 @@
             <div class="copyrights">
                 <div class="box">
                     <p>
-                        Copyright @ 2023 by <a href="#">SF</a> All Rights reserved
+                        Copyright @ 2023 by <a href="#">beinggrabbedsolutionspvtltd</a> All Rights reserved
                     </p>
                 </div>
                 <div class="box">

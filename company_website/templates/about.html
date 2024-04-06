@@ -1,146 +1,134 @@
-{% extends "index.html" %}
+{% extends 'index.html' %}
 {% load static %}
 {% block body %}
-<style>
+  <style>
     * {
-        margin: 0px;
-        padding: 0px;
+      margin: 0px;
+      padding: 0px;
     }
-
+    
     .bgimage {
-        height: 80vh;
-        width: 100%;
-        position: relative;
-        background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-        background-size: cover;
-        background-attachment: fixed;
+      height: 80vh;
+      width: 100%;
+      position: relative;
+      background-image: url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-size: cover;
+      background-attachment: fixed;
     }
-
+    
     .overlay {
-        width: 100%;
-        height: 100%;
-        font-size: 26px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      font-size: 26px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
     }
-
+    
     .overlay p {
-        font-size: 16px;
+      font-size: 16px;
     }
-
-
+    
     .area ul li {
-        margin-left: 5%;
-        gap: 1rem;
-        color: #000;
+      margin-left: 5%;
+      gap: 1rem;
+      color: #000;
     }
-
+    
     .vision {
-        display: flex;
-        justify-content: center;
-
+      display: flex;
+      justify-content: center;
     }
-
+    
     .icon:hover {
-        background-color: #e2dcdc;
+      background-color: #e2dcdc;
     }
-</style>
-<div class="bgimage">
+  </style>
+  <div class="bgimage">
     <div class="overlay">
-        <h1>ABOUT US</h1>
-        <p>Completed 6 successful years in service and product industry</p>
+      <h1>ABOUT US</h1>
+      {% comment %} <p>Completed 6 successful years in service and product industry</p> {% endcomment %}
     </div>
-</div>
-<div class="area" style="margin: 5%;">
-    <h2 style="text-align: center; padding: 10px;">One-Stop Solution for All Your Digital Needs</h2><br>
-    <p>Do you have a unique idea for a digital product and are looking for a one-stop-solution for everything from
-        ideation, software, launching, and marketing your product?</p><br>
+  </div>
+  <div class="area" style="margin: 5%;">
+    <h2 style="text-align: center; padding: 10px;">One-Stop Solution for All Your Digital Needs</h2><br />
+    <p>Do you have a unique idea for a digital product and are looking for a one-stop-solution for everything from ideation, software, launching, and marketing your product?</p><br />
     <p>Softech is the right fit for all your digital needs.</p>
     <ul>
-        <li>Our team of 800+ specialists can assist you with everything from ideation to launching and marketing your
-            product.</li>
-        <li>We offer a wide range of services, including product design and development, website and mobile app
-            development, digital marketing, and IT staffing.</li>
-        <li>At Softech, we deliver personalized solutions for each unique business, recognizing their individual needs
-            and requirements.</li>
-        <li>Stay ahead of the competition with Softech's advanced one-stop digital solutions.</li>
-    </ul><br>
-</div>
-<div class="special" style="background-color: #b1b1b1; height: 250px; width: 100%;">
+      <li>Our team of 800+ specialists can assist you with everything from ideation to launching and marketing your product.</li>
+      <li>We offer a wide range of services, including product design and development, website and mobile app development, digital marketing, and IT staffing.</li>
+      <li>At Softech, we deliver personalized solutions for each unique business, recognizing their individual needs and requirements.</li>
+      <li>Stay ahead of the competition with Softech's advanced one-stop digital solutions.</li>
+    </ul><br />
+  </div>
+  <div class="special" style="background-color: #b1b1b1; height: 250px; width: 100%;">
     <div class="heading" style="text-align: center; padding: 20px;">
-        <h2> Our Vision & Mission</h2>
+      <h2>Our Vision & Mission</h2>
     </div>
     <div class="vision">
-        <div class="icon" style="padding:15px 30px; margin: 10px;"><img
-                src="https://cdn-icons-png.flaticon.com/512/2297/2297019.png" alt="" style="height: 50px; width: 50px;">
-        </div>
-        <div class="desc">
-            <h2>Vision</h2>
-            <p>To be a leader in Product Development - Software by creating a one-stop solution platform for every
-                customer and their growth.</p>
-        </div>
-        <div class="icon" style="padding:15px 30px;margin: 10px; "><img
-                src="https://cdn-icons-png.flaticon.com/512/1404/1404716.png" alt="" style="height: 50px; width: 50px;">
-        </div>
-        <div class="desc">
-            <h2>Mission</h2>
-            <p>To focus on delivering high-quality IT Products & Services, Solutions, and Maintenance, which will
-                improve business growth for our customers.</p>
-        </div>
+      <div class="icon" style="padding:15px 30px; margin: 10px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/2297/2297019.png" alt="" style="height: 50px; width: 50px;" />
+      </div>
+      <div class="desc">
+        <h2>Vision</h2>
+        <p>To be a leader in Product Development - Software by creating a one-stop solution platform for every customer and their growth.</p>
+      </div>
+      <div class="icon" style="padding:15px 30px;margin: 10px; ">
+        <img src="https://cdn-icons-png.flaticon.com/512/1404/1404716.png" alt="" style="height: 50px; width: 50px;" />
+      </div>
+      <div class="desc">
+        <h2>Mission</h2>
+        <p>To focus on delivering high-quality IT Products & Services, Solutions, and Maintenance, which will improve business growth for our customers.</p>
+      </div>
     </div>
-
-</div>
-<div class="services">
+  </div>
+  <div class="services">
     <div class="heading" style="text-align: center; padding: 20px;">
-        <p>WHY CHOOSE US</p>
-        <h1>We Believe In</h1>
+      <p>WHY CHOOSE US</p>
+      <h1>We Believe In</h1>
     </div>
-</div>
-<div class="believe">
+  </div>
+  <div class="believe">
     <div class="container" style="display: flex; align-items: center; text-align: center; padding: 20px;">
-        <div class="box">
-            <div class="icons">
-                <img src="https://www.marolix.com/img/why/customization.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;">
-            </div>
-            <div class="desc">
-                <h2>Customization</h2>
-                <p>Softech offers tailor-made solutions as every business is unique and requires customized solutions to address its specific needs.</p>
-            </div>
+      <div class="box">
+        <div class="icons">
+          <img src="https://www.marolix.com/img/why/customization.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;" />
         </div>
-        <div class="box">
-            <div class="icons">
-                <img src="https://www.marolix.com/img/why/quality.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;">
-            </div>
-            <div class="desc">
-                <h2>
-                    Quality over Quantity
-                </h2>
-                <p>Softech is committed to exceeding customer satisfaction with high-quality services by adhering to strict quality standards and procedures.</p>
-            </div>
+        <div class="desc">
+          <h2>Customization</h2>
+          <p>Softech offers tailor-made solutions as every business is unique and requires customized solutions to address its specific needs.</p>
         </div>
-        <div class="box">
-            <div class="icons">
-                <img src="https://www.marolix.com/img/why/success.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;">
-            </div>
-            <div class="desc">
-                <h2>Staying together to success</h2>
-                <p>Softech strives to establish long-term partnerships with its clients, providing them with an unmatched design experience.</p>
-            </div>
+      </div>
+      <div class="box">
+        <div class="icons">
+          <img src="https://www.marolix.com/img/why/quality.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;" />
         </div>
-        <div class="box">
-            <div class="icons" >
-                <img src="https://www.marolix.com/img/why/innovation.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;">
-            </div>
-            <div class="desc">
-                <h2>Innovation</h2>
-                <p>Softech's commitment to innovation and R&D ensures clients with cutting-edge solutions, keeping them competitive in their respective industries.</p>
-            </div>
+        <div class="desc">
+          <h2>Quality over Quantity</h2>
+          <p>Softech is committed to exceeding customer satisfaction with high-quality services by adhering to strict quality standards and procedures.</p>
         </div>
+      </div>
+      <div class="box">
+        <div class="icons">
+          <img src="https://www.marolix.com/img/why/success.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;" />
+        </div>
+        <div class="desc">
+          <h2>Staying together to success</h2>
+          <p>Softech strives to establish long-term partnerships with its clients, providing them with an unmatched design experience.</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icons">
+          <img src="https://www.marolix.com/img/why/innovation.png" alt="" style="border-radius: 50%; border: 20px solid rgb(40, 91, 121); padding: 20px; margin: 20px;" />
+        </div>
+        <div class="desc">
+          <h2>Innovation</h2>
+          <p>Softech's commitment to innovation and R&D ensures clients with cutting-edge solutions, keeping them competitive in their respective industries.</p>
+        </div>
+      </div>
     </div>
-</div>
-
-{% endblock body %}
+  </div>
+{% endblock %}

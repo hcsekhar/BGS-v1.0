@@ -30,8 +30,13 @@ def port(req):
     return render(req,'portfolio.html')
 
 def team(req):
-    team = Team.objects.all()
+    team = Team.objects.all()   
     return render(req,'teams.html', {'team':team})
+def products(req):
+    return render(req,'products.html')
+
+def Pricing(req):
+    return render(req,'Pricing.html')
 
 def  gallery(req,pid):
      if pid == 0:
